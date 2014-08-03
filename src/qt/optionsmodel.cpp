@@ -42,14 +42,14 @@ void OptionsModel::Init()
     QSettings settings;
 
     // These are Qt-only settings:
-    nDisplayUnit = settings.value("nDisplayUnit", FreicoinUnits::FRC).toInt();
+    nDisplayUnit = settings.value("nDisplayUnit", DixiecoinUnits::DXC).toInt();
     bDisplayAddresses = settings.value("bDisplayAddresses", false).toBool();
     fMinimizeToTray = settings.value("fMinimizeToTray", false).toBool();
     fMinimizeOnClose = settings.value("fMinimizeOnClose", false).toBool();
     nTransactionFee = i64_to_mpq(settings.value("nTransactionFee").toLongLong());
     language = settings.value("language", "").toString();
 
-    // These are shared with core Freicoin; we want
+    // These are shared with core Dixiecoin; we want
     // command-line options to override the GUI settings:
     if (settings.contains("fUseUPnP"))
         SoftSetBoolArg("-upnp", settings.value("fUseUPnP").toBool());

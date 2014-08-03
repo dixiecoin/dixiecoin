@@ -1,9 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Freicoin
-Comment=Freicoin P2P Cryptocurrency
-Comment[fr]=Freicoin, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Freicoin, eşten eşe kriptografik sanal para birimi
+Name=Dixiecoin
+Comment=Dixiecoin P2P Cryptocurrency
+Comment[fr]=Dixiecoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Dixiecoin, eşten eşe kriptografik sanal para birimi
 Exec=/usr/bin/freicoin-qt
 Terminal=false
 Type=Application

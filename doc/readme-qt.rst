@@ -1,4 +1,4 @@
-Freicoin-Qt: Qt4 GUI for Freicoin
+Dixiecoin-Qt: Qt4 GUI for Dixiecoin
 =================================
 
 Build instructions
@@ -122,9 +122,9 @@ flag to qmake to control this:
 Berkely DB version warning
 ==========================
 
-A warning for people using the *static binary* version of Freicoin on a Linux/UNIX-ish system (tl;dr: **Berkely DB databases are not forward compatible**).
+A warning for people using the *static binary* version of Dixiecoin on a Linux/UNIX-ish system (tl;dr: **Berkely DB databases are not forward compatible**).
 
-The static binary version of Freicoin is linked against libdb4.8 (see also `this Debian issue`_).
+The static binary version of Dixiecoin is linked against libdb4.8 (see also `this Debian issue`_).
 
 Now the nasty thing is that databases from 5.X are not compatible with 4.X.
 

@@ -12,12 +12,12 @@ QT_END_NAMESPACE
 
 /** Widget for entering freicoin amounts.
   */
-class FreicoinAmountField: public QWidget
+class DixiecoinAmountField: public QWidget
 {
     Q_OBJECT
     Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY textChanged USER true)
 public:
-    explicit FreicoinAmountField(QWidget *parent = 0);
+    explicit DixiecoinAmountField(QWidget *parent = 0);
 
     qint64 value(bool *valid=0) const;
     void setValue(qint64 value);

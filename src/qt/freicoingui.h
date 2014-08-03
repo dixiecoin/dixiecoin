@@ -29,15 +29,15 @@ class QUrl;
 QT_END_NAMESPACE
 
 /**
-  Freicoin GUI main class. This class represents the main window of the Freicoin UI. It communicates with both the client and
+  Dixiecoin GUI main class. This class represents the main window of the Dixiecoin UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
-class FreicoinGUI : public QMainWindow
+class DixiecoinGUI : public QMainWindow
 {
     Q_OBJECT
 public:
-    explicit FreicoinGUI(QWidget *parent = 0);
-    ~FreicoinGUI();
+    explicit DixiecoinGUI(QWidget *parent = 0);
+    ~DixiecoinGUI();
 
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.

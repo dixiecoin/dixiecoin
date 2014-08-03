@@ -140,7 +140,7 @@
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="FreicoinAmountField" name="lnReqAmount">
+         <widget class="DixiecoinAmountField" name="lnReqAmount">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -185,7 +185,7 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>FreicoinAmountField</class>
+   <class>DixiecoinAmountField</class>
    <extends>QSpinBox</extends>
    <header>freicoinamountfield.h</header>
   </customwidget>

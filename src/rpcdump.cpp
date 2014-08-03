@@ -43,7 +43,7 @@ Value importprivkey(const Array& params, bool fHelp)
     string strLabel = "";
     if (params.size() > 1)
         strLabel = params[1].get_str();
-    CFreicoinSecret vchSecret;
+    CDixiecoinSecret vchSecret;
     bool fGood = vchSecret.SetString(strSecret);
 
     if (!fGood) throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid private key");
@@ -77,9 +77,9 @@ Value dumpprivkey(const Array& params, bool fHelp)
             "Reveals the private key corresponding to <freicoinaddress>.");
 
     string strAddress = params[0].get_str();
-    CFreicoinAddress address;
+    CDixiecoinAddress address;
     if (!address.SetString(strAddress))
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Freicoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Dixiecoin address");
     CKeyID keyID;
     if (!address.GetKeyID(keyID))
         throw JSONRPCError(RPC_TYPE_ERROR, "Address does not refer to a key");
@@ -87,5 +87,5 @@ Value dumpprivkey(const Array& params, bool fHelp)
     bool fCompressed;
     if (!pwalletMain->GetSecret(keyID, vchSecret, fCompressed))
         throw JSONRPCError(RPC_WALLET_ERROR, "Private key for address " + strAddress + " is not known");
-    return CFreicoinSecret(vchSecret, fCompressed).ToString();
+    return CDixiecoinSecret(vchSecret, fCompressed).ToString();
 }

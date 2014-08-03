@@ -16,7 +16,7 @@ To Build
 cd src/
 make -f makefile.unix            # Headless freicoin
 
-See readme-qt.rst for instructions on building Freicoin-Qt,
+See readme-qt.rst for instructions on building Dixiecoin-Qt,
 the graphical user interface.
 
 Dependencies
@@ -85,7 +85,7 @@ Optional:
 Dependency Build Instructions: Gentoo
 -------------------------------------
 
-Note: If you just want to install freicoind on Gentoo, you can add the Freicoin
+Note: If you just want to install freicoind on Gentoo, you can add the Dixiecoin
       overlay and use your package manager:
           layman -a freicoin && emerge freicoind
 

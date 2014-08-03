@@ -13,12 +13,12 @@
   - '0' and 'O' to 'o'
 */
 
-FreicoinAddressValidator::FreicoinAddressValidator(QObject *parent) :
+DixiecoinAddressValidator::DixiecoinAddressValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State FreicoinAddressValidator::validate(QString &input, int &pos) const
+QValidator::State DixiecoinAddressValidator::validate(QString &input, int &pos) const
 {
     // Correction
     for(int idx=0; idx<input.size();)

@@ -6,22 +6,22 @@
 #include <QString>
 #include <QAbstractListModel>
 
-/** Freicoin unit definitions. Encapsulates parsing and formatting
+/** Dixiecoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for dropdown selection boxes.
 */
-class FreicoinUnits: public QAbstractListModel
+class DixiecoinUnits: public QAbstractListModel
 {
 public:
-    explicit FreicoinUnits(QObject *parent);
+    explicit DixiecoinUnits(QObject *parent);
 
-    /** Freicoin units.
+    /** Dixiecoin units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {
-        FRC,
-        mFRC,
-        uFRC
+        DXC,
+        mDXC,
+        uDXC
     };
 
     //! @name Static API
@@ -61,8 +61,8 @@ public:
     QVariant data(const QModelIndex &index, int role) const;
     ///@}
 private:
-    QList<FreicoinUnits::Unit> unitlist;
+    QList<DixiecoinUnits::Unit> unitlist;
 };
-typedef FreicoinUnits::Unit FreicoinUnit;
+typedef DixiecoinUnits::Unit DixiecoinUnit;
 
 #endif // FREICOINUNITS_H

@@ -428,7 +428,7 @@ QString TransactionTableModel::formatTxAmount(const TransactionRecord *wtx, bool
 {
     mpq qNet = wtx->credit + wtx->debit;
     qNet = RoundAbsolute(qNet, ROUND_TOWARDS_ZERO);
-    QString str = FreicoinUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), qNet);
+    QString str = DixiecoinUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), qNet);
     if(showUnconfirmed)
     {
         if(!wtx->status.confirmed || wtx->status.maturity != TransactionStatus::Mature)

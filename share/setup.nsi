@@ -1,4 +1,4 @@
-Name Freicoin
+Name Dixiecoin
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -6,7 +6,7 @@ SetCompressor /SOLID lzma
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
 !define VERSION 0.0.2-2
-!define COMPANY "Freicoin project"
+!define COMPANY "Dixiecoin project"
 !define URL http://freico.in/
 
 # MUI Symbol Definitions
@@ -19,7 +19,7 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER Freicoin
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER Dixiecoin
 !define MUI_FINISHPAGE_RUN $INSTDIR\freicoin-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "../share/pixmaps/nsis-wizard.bmp"
@@ -46,13 +46,13 @@ Var StartMenuGroup
 
 # Installer attributes
 OutFile freicoin-0.0.2-2-windows-setup.exe
-InstallDir $PROGRAMFILES\Freicoin
+InstallDir $PROGRAMFILES\Dixiecoin
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
 VIProductVersion 0.7.2.0
-VIAddVersionKey ProductName Freicoin
+VIAddVersionKey ProductName Dixiecoin
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
 VIAddVersionKey CompanyWebsite "${URL}"
@@ -87,8 +87,8 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Freicoin.lnk" $INSTDIR\freicoin-qt.exe
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall Freicoin.lnk" $INSTDIR\uninstall.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Dixiecoin.lnk" $INSTDIR\freicoin-qt.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall Dixiecoin.lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayVersion "${VERSION}"
@@ -99,7 +99,7 @@ Section -post SEC0001
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
     WriteRegStr HKCR "freicoin" "URL Protocol" ""
-    WriteRegStr HKCR "freicoin" "" "URL:Freicoin"
+    WriteRegStr HKCR "freicoin" "" "URL:Dixiecoin"
     WriteRegStr HKCR "freicoin\DefaultIcon" "" $INSTDIR\freicoin-qt.exe
     WriteRegStr HKCR "freicoin\shell\open\command" "" '"$INSTDIR\freicoin-qt.exe" "%1"'
 SectionEnd
@@ -129,9 +129,9 @@ SectionEnd
 
 Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall Freicoin.lnk"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Freicoin.lnk"
-    Delete /REBOOTOK "$SMSTARTUP\Freicoin.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall Dixiecoin.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Dixiecoin.lnk"
+    Delete /REBOOTOK "$SMSTARTUP\Dixiecoin.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
     Delete /REBOOTOK $INSTDIR\db.log

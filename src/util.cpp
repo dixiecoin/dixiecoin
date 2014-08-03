@@ -1121,13 +1121,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Freicoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Freicoin
-    // Mac: ~/Library/Application Support/Freicoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Dixiecoin
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Dixiecoin
+    // Mac: ~/Library/Application Support/Dixiecoin
     // Unix: ~/.freicoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Freicoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Dixiecoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1139,7 +1139,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "Freicoin";
+    return pathRet / "Dixiecoin";
 #else
     // Unix
     return pathRet / ".freicoin";
@@ -1359,10 +1359,10 @@ void AddTimeData(const CNetAddr& ip, int64 nTime)
                 if (!fMatch)
                 {
                     fDone = true;
-                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Freicoin will not work properly.");
+                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Dixiecoin will not work properly.");
                     strMiscWarning = strMessage;
                     printf("*** %s\n", strMessage.c_str());
-                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("Freicoin"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION);
+                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("Dixiecoin"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION);
                 }
             }
         }

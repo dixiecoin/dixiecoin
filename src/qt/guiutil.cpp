@@ -61,8 +61,8 @@ QFont freicoinAddressFont()
 
 void setupAddressWidget(QLineEdit *widget, QWidget *parent)
 {
-    widget->setMaxLength(FreicoinAddressValidator::MaxAddressLength);
-    widget->setValidator(new FreicoinAddressValidator(parent));
+    widget->setMaxLength(DixiecoinAddressValidator::MaxAddressLength);
+    widget->setValidator(new DixiecoinAddressValidator(parent));
     widget->setFont(freicoinAddressFont());
 }
 
@@ -75,7 +75,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
     widget->setAlignment(Qt::AlignRight|Qt::AlignVCenter);
 }
 
-bool parseFreicoinURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parseDixiecoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     if(uri.scheme() != QString("freicoin"))
         return false;
@@ -102,7 +102,7 @@ bool parseFreicoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!FreicoinUnits::parse(FreicoinUnits::FRC, i->second, &rv.amount))
+                if(!DixiecoinUnits::parse(DixiecoinUnits::DXC, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -120,7 +120,7 @@ bool parseFreicoinURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseFreicoinURI(QString uri, SendCoinsRecipient *out)
+bool parseDixiecoinURI(QString uri, SendCoinsRecipient *out)
 {
     // Convert freicoin:// to freicoin:
     //
@@ -131,7 +131,7 @@ bool parseFreicoinURI(QString uri, SendCoinsRecipient *out)
         uri.replace(0, 10, "freicoin:");
     }
     QUrl uriInstance(uri);
-    return parseFreicoinURI(uriInstance, out);
+    return parseDixiecoinURI(uriInstance, out);
 }
 
 QString HtmlEscape(const QString& str, bool fMultiLine)
@@ -272,12 +272,12 @@ bool ToolTipToRichTextFilter::eventFilter(QObject *obj, QEvent *evt)
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "Freicoin.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "Dixiecoin.lnk";
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for Freicoin.lnk
+    // check for Dixiecoin.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -395,7 +395,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         // Write a freicoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=Freicoin\n";
+        optionFile << "Name=Dixiecoin\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -416,7 +416,7 @@ bool SetStartOnSystemStartup(bool fAutoStart) { return false; }
 HelpMessageBox::HelpMessageBox(QWidget *parent) :
     QMessageBox(parent)
 {
-    header = tr("Freicoin-Qt") + " " + tr("version") + " " +
+    header = tr("Dixiecoin-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
         "  freicoin-qt [" + tr("command-line options") + "]                     " + "\n";
@@ -428,7 +428,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
         "  -min                   " + tr("Start minimized") + "\n" +
         "  -splash                " + tr("Show splash screen on startup (default: 1)") + "\n";
 
-    setWindowTitle(tr("Freicoin-Qt"));
+    setWindowTitle(tr("Dixiecoin-Qt"));
     setTextFormat(Qt::PlainText);
     // setMinimumWidth is ignored for QMessageBox so put in non-breaking spaces to make it wider.
     setText(header + QString(QChar(0x2003)).repeated(50));

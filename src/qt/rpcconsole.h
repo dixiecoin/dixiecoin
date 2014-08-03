@@ -8,7 +8,7 @@ namespace Ui {
 }
 class ClientModel;
 
-/** Local Freicoin RPC console. */
+/** Local Dixiecoin RPC console. */
 class RPCConsole: public QDialog
 {
     Q_OBJECT

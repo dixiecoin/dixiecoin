@@ -24,7 +24,7 @@ QT_TRANSLATE_NOOP("freicoin-core", ""
 "An error occurred while setting up the RPC port %u for listening on IPv6, "
 "falling back to IPv4: %s"),
 QT_TRANSLATE_NOOP("freicoin-core", ""
-"Cannot obtain a lock on data directory %s.  Freicoin is probably already "
+"Cannot obtain a lock on data directory %s.  Dixiecoin is probably already "
 "running."),
 QT_TRANSLATE_NOOP("freicoin-core", ""
 "Detach block and address databases. Increases shutdown time (default: 0)"),
@@ -50,7 +50,7 @@ QT_TRANSLATE_NOOP("freicoin-core", ""
 "Set maximum size of high-priority/low-fee transactions in bytes (default: "
 "27000)"),
 QT_TRANSLATE_NOOP("freicoin-core", ""
-"Unable to bind to %s on this computer. Freicoin is probably already running."),
+"Unable to bind to %s on this computer. Dixiecoin is probably already running."),
 QT_TRANSLATE_NOOP("freicoin-core", ""
 "Warning: -paytxfee is set very high! This is the transaction fee you will "
 "pay if you send a transaction."),
@@ -59,7 +59,7 @@ QT_TRANSLATE_NOOP("freicoin-core", ""
 "or other nodes may need to upgrade."),
 QT_TRANSLATE_NOOP("freicoin-core", ""
 "Warning: Please check that your computer's date and time are correct! If "
-"your clock is wrong Freicoin will not work properly."),
+"your clock is wrong Dixiecoin will not work properly."),
 QT_TRANSLATE_NOOP("freicoin-core", ""
 "Warning: error reading wallet.dat! All keys read correctly, but transaction "
 "data or address book entries might be missing or incorrect."),
@@ -94,7 +94,7 @@ QT_TRANSLATE_NOOP("freicoin-core", "Done loading"),
 QT_TRANSLATE_NOOP("freicoin-core", "Error loading blkindex.dat"),
 QT_TRANSLATE_NOOP("freicoin-core", "Error loading wallet.dat"),
 QT_TRANSLATE_NOOP("freicoin-core", "Error loading wallet.dat: Wallet corrupted"),
-QT_TRANSLATE_NOOP("freicoin-core", "Error loading wallet.dat: Wallet requires newer version of Freicoin"),
+QT_TRANSLATE_NOOP("freicoin-core", "Error loading wallet.dat: Wallet requires newer version of Dixiecoin"),
 QT_TRANSLATE_NOOP("freicoin-core", "Error"),
 QT_TRANSLATE_NOOP("freicoin-core", "Error: Transaction creation failed  "),
 QT_TRANSLATE_NOOP("freicoin-core", "Error: Wallet locked, unable to create transaction  "),
@@ -103,8 +103,8 @@ QT_TRANSLATE_NOOP("freicoin-core", "Failed to listen on any port. Use -listen=0 
 QT_TRANSLATE_NOOP("freicoin-core", "Fee per KB to add to transactions you send"),
 QT_TRANSLATE_NOOP("freicoin-core", "Find peers using DNS lookup (default: 1 unless -connect)"),
 QT_TRANSLATE_NOOP("freicoin-core", "Find peers using internet relay chat (default: 0)"),
-QT_TRANSLATE_NOOP("freicoin-core", "Freicoin version"),
-QT_TRANSLATE_NOOP("freicoin-core", "Freicoin"),
+QT_TRANSLATE_NOOP("freicoin-core", "Dixiecoin version"),
+QT_TRANSLATE_NOOP("freicoin-core", "Dixiecoin"),
 QT_TRANSLATE_NOOP("freicoin-core", "Generate coins"),
 QT_TRANSLATE_NOOP("freicoin-core", "Get help for a command"),
 QT_TRANSLATE_NOOP("freicoin-core", "How many blocks to check at startup (default: 2500, 0 = all)"),
@@ -169,7 +169,7 @@ QT_TRANSLATE_NOOP("freicoin-core", "Use proxy to reach tor hidden services (defa
 QT_TRANSLATE_NOOP("freicoin-core", "Use the test network"),
 QT_TRANSLATE_NOOP("freicoin-core", "Username for JSON-RPC connections"),
 QT_TRANSLATE_NOOP("freicoin-core", "Verifying database integrity..."),
-QT_TRANSLATE_NOOP("freicoin-core", "Wallet needed to be rewritten: restart Freicoin to complete"),
+QT_TRANSLATE_NOOP("freicoin-core", "Wallet needed to be rewritten: restart Dixiecoin to complete"),
 QT_TRANSLATE_NOOP("freicoin-core", "Warning: Disk space is low!"),
 QT_TRANSLATE_NOOP("freicoin-core", "Warning: This version is obsolete, upgrade required!"),
 QT_TRANSLATE_NOOP("freicoin-core", "wallet.dat corrupt, salvage failed"),

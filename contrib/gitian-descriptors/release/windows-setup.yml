@@ -11,7 +11,7 @@ packages:
 reference_datetime: "2012-07-01 00:00:00"
 remotes: []
 files:
-- "Freicoin-Qt-i686-static-mingw32-0.0.2-2-gitian.zip"
+- "Dixiecoin-Qt-i686-static-mingw32-0.0.2-2-gitian.zip"
 - "freicoind-i686-static-mingw32-0.0.2-2-gitian.zip"
 - "src-local.tar.xz"
 script: |
@@ -33,9 +33,9 @@ script: |
 
   tar -xf "$GITIANDIR"/src-local.tar.xz
   unzip "$GITIANDIR"/freicoind-i686-static-mingw32-${FREICOIN_VER}-gitian.zip bin/freicoind.exe
-  unzip "$GITIANDIR"/Freicoin-Qt-i686-static-mingw32-${FREICOIN_VER}-gitian.zip bin/Freicoin-Qt.exe
+  unzip "$GITIANDIR"/Dixiecoin-Qt-i686-static-mingw32-${FREICOIN_VER}-gitian.zip bin/Dixiecoin-Qt.exe
   mkdir -p release
-  mv bin/Freicoin-Qt.exe release/
+  mv bin/Dixiecoin-Qt.exe release/
   mv bin/freicoind.exe src/
   cd src
   makensis ../share/setup.nsi
